@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+
+<h:body>
+
+
+	<p:growl  id="growl" sticky="true" showDetail="true" />
+
+	<p:layout style="min-width:900px;min-height:900px;" id="layout">
+		<p:layoutUnit   header="EXEMPLO SIMPLES PARA UMA TELA DE CADASTRO COM PRIMEFACES" position="north" resizable="true" size="15" minSize="40"
+			maxSize="200">
+
+
+		</p:layoutUnit>
+
+
+		<p:layoutUnit position="center" visible="true">
+			<p:panel header="Cadastro de Funcionários" id="panel"
+				style="width:75%;left: 5%">
+				<h:panelGrid border="0" style="text-align:left; width:100%">
+					<h:form>
+						<p:tabView>
+							<p:tab title="Identificação">
+
+								<p:panelGrid columns="4" layout="tabular"
+									columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4"
+									contentStyleClass="p-align-baseline ui-fluid">
+
+									<p:outputLabel for="name" value="Nome:"
+										style="font-weight:bold" />
+									<p:inputText id="name" />
+
+									<p:outputLabel for="cpf" value="CPF:" style="font-weight:bold" />
+									<p:inputText id="cpf" mask="99.999.999-99" />
+
+									<p:outputLabel for="telefone" value="Telefone:"
+										style="font-weight:bold" />
+									<p:inputMask id="telefone" mask="99-9999-9999" />
+
+
+									<p:outputLabel for="dnasc" value="Data de Nascimento:"
+										style="font-weight:bold" />
+									<p:inputMask id="dnasc" mask="99/99/9999" />
+
+								</p:panelGrid>
+
+
+
+							</p:tab>
+						</p:tabView>
+
+						<p:tabView>
+							<p:tab title="Vinculo/Cargo">
+
+								<p:panelGrid columns="4" layout="tabular"
+									columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4"
+									contentStyleClass="p-align-baseline ui-fluid">
+
+									<p:outputLabel for="seldep" value="Departamento"
+										style="font-weight:bold" />
+									<p:selectOneMenu id="seldep">
+										<f:selectItem itemLabel="Selecione" itemValue="" />
+										<f:selectItem itemLabel="RH" itemValue="RH" />
+										<f:selectItem itemLabel="TI" itemValue="TI" />
+										<f:selectItem itemLabel="Financeiro" itemValue="Financeiro" />
+									</p:selectOneMenu>
+
+									<p:outputLabel for="selcar" value="Cargo"
+										style="font-weight:bold" />
+									<p:selectOneMenu id="selcar">
+										<f:selectItem itemLabel="Selecione" itemValue="" />
+										<f:selectItem itemLabel="Suporte" itemValue="Suporte" />
+										<f:selectItem itemLabel="Operador" itemValue="Operador" />
+										<f:selectItem itemLabel="Vendedor" itemValue="Vendedor" />
+									</p:selectOneMenu>
+
+								</p:panelGrid>
+
+							</p:tab>
+						</p:tabView>
+
+						<p:tabView>
+							<p:tab title="Informações de Contrato">
+
+								<p:panelGrid columns="4" layout="tabular"
+									columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4"
+									contentStyleClass="p-align-baseline ui-fluid">
+
+									<p:outputLabel for="checkboxA" value="Contrato de Experiencia"
+										style="font-weight:bold" />
+									<p:selectBooleanCheckbox id="checkboxA" itemLabel="Sim" />
+									<p:selectBooleanCheckbox id="checkboxB" itemLabel="Nao" />
+								</p:panelGrid>
+
+
+							</p:tab>
+						</p:tabView>
+
+						<p:tabView>
+							<p:tab title="Informaçoes Adicionais">
+
+								<p:panelGrid columns="4" layout="tabular"
+									columnClasses="p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4, p-col-12 p-md-3 p-xl-2, p-col-12 p-md-9 p-xl-4"
+									contentStyleClass="p-align-baseline ui-fluid">
+
+									<p:outputLabel for="end" value="Endereço:"
+										style="font-weight:bold" />
+									<p:inputText id="end" />
+
+									<p:outputLabel for="bairro" value="Bairro:"
+										style="font-weight:bold" />
+									<p:inputText id="bairro" />
+
+									<p:outputLabel for="cidade" value="Cidade:"
+										style="font-weight:bold" />
+									<p:inputMask id="cidade" />
+
+
+									<p:outputLabel for="uf" value="Uf:" style="font-weight:bold" />
+									<p:inputMask id="uf" mask="" />
+
+								</p:panelGrid>
+
+							</p:tab>
+						</p:tabView>
+
+
+					</h:form>
+					<p:button onclick="" value="Salvar" />
+
+				</h:panelGrid>
+			</p:panel>
+		</p:layoutUnit>
+
+	</p:layout>
+</h:body>
+
+</html>
